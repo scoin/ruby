@@ -1,0 +1,39 @@
+def add(i,j)
+i + j
+end
+
+def subtract(i,j)
+i - j
+end
+
+
+def sum(array)
+array.inject(0) { |total, i| total + i }
+end
+
+def multiply(*numbers)
+numbers.inject(1) { |total, i| total * i }
+end
+
+def power(i,j)
+i ** j
+end
+
+def factorial(num)
+#wrote 2 ways - recursive and iterating - both don't work if sent 10 on my system, but do on repl.it - bignum error?
+
+#return 1 if num == 0
+#return num * factorial(num-1)
+
+return 1 if num == 0
+
+i = num
+
+while i > 1
+	num *= (i-1)
+	i -= 1
+end
+
+num
+
+end

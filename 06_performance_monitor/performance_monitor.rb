@@ -1,0 +1,15 @@
+def measure(counter = 1)
+
+start = 0
+endtime = 0
+total = 0
+
+counter.times do
+start = Time.now
+yield
+endtime = Time.now
+total += (endtime - start)
+end
+
+total = (total / counter)
+end
